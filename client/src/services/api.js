@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = 'https://file-sharing-2aqi.onrender.com'
+const API_URL = 'http://localhost:8000'
 export const uploadFile =async (data) =>{
     try{
      const response =  await axios.post(`${API_URL}/upload`,data);

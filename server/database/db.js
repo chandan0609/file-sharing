@@ -4,7 +4,7 @@ dotenv.config();
 const DBConnection = async() =>{
     const USERNAME = process.env.DB_USERNAME;
     const PASSWORD = process.env.DB_PASSWORD;
-    const MONGODB_URI = `mongodb+srv://${PASSWORD}:${PASSWORD}@cluster0.kqt5mqp.mongodb.net/?retryWrites=true&w=majority`;
+    const MONGODB_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.kqt5mqp.mongodb.net/?retryWrites=true&w=majority`;
     try{
        await mongoose.connect(MONGODB_URI,{useNewUrlParser:true});
         console.log('connected to mongoose');
@@ -13,3 +13,4 @@ const DBConnection = async() =>{
     }
 }
 export default DBConnection;
+//https://file-sharing-2aqi.onrender.com/
